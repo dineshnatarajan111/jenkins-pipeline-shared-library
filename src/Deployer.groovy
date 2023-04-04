@@ -5,10 +5,10 @@ class Deployer{
 
     Script script
 
-    def excel_loader(){
+    def excel_loader(body){
         def excelObj = new ActiveXObject('Excel.Application')
         
-        def workBook = excelObj.Workbooks.Open(1c:/codelooru.xlsx1)
+        def workBook = excelObj.Workbooks.Open(body)
 
         //To get a sheet by index
         def sheetByIndex = workBook.Sheets.Item[1]
