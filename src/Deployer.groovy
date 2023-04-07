@@ -5,10 +5,10 @@ class Deployer{
 
     Script script
 
-    def run(body){
+    def run(){
         def excelObj = new ActiveXObject('Excel.Application')
         
-        def workBook = excelObj.Workbooks.Open(body)
+        def workBook = excelObj.Workbooks.Open("GPF_KLI_Dummy.xlsx")
 
         //To get a sheet by index
         def sheetByIndex = workBook.Sheets.Item[1]
