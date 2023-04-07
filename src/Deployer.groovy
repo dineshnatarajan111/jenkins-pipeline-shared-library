@@ -5,7 +5,7 @@ class Deployer{
 
     Script script
 
-    def excel_loader(body){
+    def run(body){
         def excelObj = new ActiveXObject('Excel.Application')
         
         def workBook = excelObj.Workbooks.Open(body)
