@@ -1,6 +1,6 @@
 @Grab(group = 'org.codehaus.groovy.modules.scriptom', module='scriptom', version = '1.6.0')
-@Grab(group = 'org.apache.commons', module = 'commons-lang3', version = '3.6')
-import org.apache.commons.lang3.StringUtils
+// @Grab(group = 'org.apache.commons', module = 'commons-lang3', version = '3.6')
+// import org.apache.commons.lang3.StringUtils
 import org.codehaus.groovy.scriptom.ActiveXObject
 
 class Deployer{
