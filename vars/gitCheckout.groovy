@@ -1,5 +1,5 @@
 def call(Map stageParams) {
-    echo "$stageParams.branch"
+    echo "$stageParams.branches"
     echo "$stageParams"
     checkout([
         $class: 'scmGIT',
