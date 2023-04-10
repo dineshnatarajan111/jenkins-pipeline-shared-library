@@ -8,22 +8,20 @@ class Deployer{
     Script script
 
     def run(){
-        // def excelObj = new ActiveXObject('Excel.Application')
+        def excelObj = new ActiveXObject('Excel.Application')
         
-        // def workBook = excelObj.Workbooks.Open("GPF_KLI_Dummy.xlsx")
+        def workBook = excelObj.Workbooks.Open("GPF_KLI_Dummy.xlsx")
 
-        // //To get a sheet by index
-        // def sheetByIndex = workBook.Sheets.Item[1]
+        //To get a sheet by index
+        def sheetByIndex = workBook.Sheets.Item[1]
         
-        // //To get the active sheet in the workbook
-        // def sheetActive = workBook.ActiveSheet
+        //To get the active sheet in the workbook
+        def sheetActive = workBook.ActiveSheet
         
-        // //To get the sheet by name
-        // def sheetByName = workBook.Sheets('Sheet1')
+        //To get the sheet by name
+        def sheetByName = workBook.Sheets('Sheet1')
 
-        // def cellValue = sheet.Cells(2,1).Value
-
-        script.echo "Hello"
+        def cellValue = sheet.Cells(2,1).Value
 
         // while (tries < 10) {
         //     Thread.sleep(1000)
