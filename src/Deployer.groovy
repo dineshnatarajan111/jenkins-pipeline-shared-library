@@ -23,7 +23,7 @@ class Deployer{
 
         // def cellValue = sheet.Cells(2,1).Value
 
-        echo "Hello"
+        script.echo "Hello"
 
         // while (tries < 10) {
         //     Thread.sleep(1000)
