@@ -2,7 +2,7 @@ def call(Map stageParams) {
     echo "$stageParams.branch"
     echo "$stageParams"
     checkout([
-        $class: 'GitSCM',
+        $class: 'scmGIT',
         branches: [[name:  stageParams.name ]],
         userRemoteConfigs: [[ url: stageParams.url ]]
     ])
