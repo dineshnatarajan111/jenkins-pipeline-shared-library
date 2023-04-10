@@ -2,8 +2,8 @@
 
 def call(body){
     echo "Start Deploy"
-    echo "$WORKSPACE"
-    new Deployer(script:this).run()
+    echo "$body"
+    new Deployer(script:this).run(body)
     echo "Deployed"
 
     currentBuild.result = 'SUCCESS' //FAILURE to fail

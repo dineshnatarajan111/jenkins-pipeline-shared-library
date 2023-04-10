@@ -7,8 +7,8 @@ class Deployer{
     // int tries = 0
     Script script
 
-    def run(){
-        script.echo("HELLO")
+    def run(body){
+        script.echo("$body")
         // Workbook workbook = Workbook.getWorkbook(new File("GPF_KLI_Dummy.xlsx"))
         // Sheet sheet1 = workbook.getSheet("DataDriven")
         // def rows = sheet1.getRows()
