@@ -16,10 +16,17 @@ class Deployer{
         script.echo( "Row Count =" + rows )
         script.echo( "Column Count =" + cols ) 
         for(int i=1;i<rows;i++) { 
-            Cell cell_KLI = sheet1.getCell(2,i)
-            Cell cell_GPEF = sheet1.getCell(4,i) 
-            script.echo(cell_KLI.getContents() + " KLI")
-            script.echo(cell_GPEF.getContents() + " GPERF")
+            Cell cell_KLI_img = sheet1.getCell(2,i)
+            Cell cell_GPEF_img = sheet1.getCell(4,i) 
+            Cell cell_KLI_branch = sheet1.getCell(3,i)
+            Cell cell_GPEF_branch = sheet1.getCell(5,i)
+
+            // script.echo(cell_KLI.getContents() + " KLI")
+            // script.echo(cell_GPEF.getContents() + " GPERF")
+            if(cell_KLI_branch == cell_GPEF_branch){
+                script.echo(cell_KLI.getContents() + " KLI")
+                script.echo(cell_GPEF.getContents() + " GPERF")
+            }
             // for(int j=0;j<cols;j++) { 
             // script.echo( cell.getContents() )
             // } 
