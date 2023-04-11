@@ -15,8 +15,8 @@ class Deployer{
         def cols = sheet1.getColumns()
         print( "Row Count =" + rows )
         print( "Column Count =" + cols ) 
-        for(i=1;i<rows;i++) { 
-            for(j=0;j<cols;j++) { 
+        for(int i=1;i<rows;i++) { 
+            for(int j=0;j<cols;j++) { 
             Cell cell = sheet1.getCell(j,i) 
             print( cell.getContents() )
             } 
