@@ -9,7 +9,7 @@ class Deployer{
 
     def run(body){
         script.echo("$body")
-        Workbook workbook = Workbook.getWorkbook(new File("$body/GPF_KLI_Dummy.xlsx"))
+        Workbook workbook = Workbook.getWorkbook(new File("$body/GPF_KLI_Dummy.xls"))
         Sheet sheet1 = workbook.getSheet("DataDriven")
         def rows = sheet1.getRows()
         def cols = sheet1.getColumns()
