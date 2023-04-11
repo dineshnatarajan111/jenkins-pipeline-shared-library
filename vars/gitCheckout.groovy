@@ -1,6 +1,6 @@
 def call(Map stageParams) {
     echo "$stageParams.branches"
-    echo "$stageParams"
+    echo "$stageParams.url"
     checkout([
         $class: 'GitSCM',
         branches: [[name:  stageParams.branches ]],
