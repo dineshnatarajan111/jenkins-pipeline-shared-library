@@ -21,9 +21,9 @@ class Deployer{
             Cell cell_KLI_branch = sheet1.getCell(3,i)
             Cell cell_GPEF_branch = sheet1.getCell(5,i)
 
-            script.echo(cell_KLI_branch.getCellFormat() + " KLI format")
-            script.echo(cell_GPEF_branch.getCellFormat() + " GPERF format")
-            if(cell_KLI_branch == cell_GPEF_branch){
+            script.echo(cell_KLI_branch.getContents() + " KLI")
+            script.echo(cell_GPEF_branch.getContents() + " GPERF")
+            if(cell_KLI_branch.toString() == cell_GPEF_branch.toString()){
                 script.echo(cell_KLI.getContents() + " KLI")
                 script.echo(cell_GPEF.getContents() + " GPERF")
             }
