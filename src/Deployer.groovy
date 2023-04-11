@@ -15,7 +15,7 @@ class Deployer{
         def cols = sheet1.getColumns()
         script.echo( "Row Count =" + rows )
         script.echo( "Column Count =" + cols ) 
-        for(int i=1;i<rows;i++) { 
+        for(int i=2;i<rows;i++) { 
             for(int j=0;j<cols;j++) { 
             Cell cell = sheet1.getCell(j,i) 
             script.echo( cell.getContents() )
