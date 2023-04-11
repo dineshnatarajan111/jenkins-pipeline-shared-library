@@ -21,11 +21,11 @@ class Deployer{
             Cell cell_KLI_branch = sheet1.getCell(3,i)
             Cell cell_GPEF_branch = sheet1.getCell(5,i)
 
-            script.echo(cell_KLI_branch.getContents().getType() + " KLI")
-            script.echo(cell_GPEF_branch.getContents().getType() + " GPERF")
-            if(cell_KLI_branch.toString() == cell_GPEF_branch.toString()){
-                script.echo(cell_KLI.getContents() + " KLI")
-                script.echo(cell_GPEF.getContents() + " GPERF")
+            script.echo(cell_KLI_branch.getContents() + " KLI")
+            script.echo(cell_GPEF_branch.getContents() + " GPERF")
+            if(cell_KLI_branch.getContents() == cell_GPEF_branch.getContents()){
+                script.echo(cell_KLI.getContents() + " KLI H")
+                script.echo(cell_GPEF.getContents() + " GPERF H")
             }
             // for(int j=0;j<cols;j++) { 
             // script.echo( cell.getContents() )
