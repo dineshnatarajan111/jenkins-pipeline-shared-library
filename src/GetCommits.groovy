@@ -1,4 +1,4 @@
-class GetCommits(){
+class GetCommits{
     Script script
 
     def commits(body){
