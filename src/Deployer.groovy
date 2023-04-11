@@ -16,10 +16,13 @@ class Deployer{
         script.echo( "Row Count =" + rows )
         script.echo( "Column Count =" + cols ) 
         for(int i=0;i<rows;i++) { 
-            for(int j=0;j<cols;j++) { 
-            Cell cell = sheet1.getCell(j,i) 
-            script.echo( cell.getContents() )
-            } 
+            Cell cell_KLI = sheet1.getCell(j,2)
+            Cell cell_GPEF = sheet1.getCell(j,4) 
+            script.echo(cell_KLI.getContents() + "KLI")
+            script.echo(cell_GPEF.getContents() + "GPERF")
+            // for(int j=0;j<cols;j++) { 
+            // script.echo( cell.getContents() )
+            // } 
         }
     }
 }
