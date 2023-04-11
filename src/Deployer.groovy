@@ -24,8 +24,8 @@ class Deployer{
             script.echo(cell_KLI_branch.getContents() + " KLI")
             script.echo(cell_GPEF_branch.getContents() + " GPERF")
             if(cell_KLI_branch.getContents() == cell_GPEF_branch.getContents()){
-                script.echo(cell_KLI.getContents() + " KLI H")
-                script.echo(cell_GPEF.getContents() + " GPERF H")
+                script.echo(cell_KLI_branch.getContents() + " KLI H")
+                script.echo(cell_GPEF_branch.getContents() + " GPERF H")
             }
             // for(int j=0;j<cols;j++) { 
             // script.echo( cell.getContents() )
