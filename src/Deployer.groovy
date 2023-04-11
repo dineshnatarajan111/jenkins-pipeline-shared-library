@@ -13,12 +13,12 @@ class Deployer{
         Sheet sheet1 = workbook.getSheet("Sheet1")
         def rows = sheet1.getRows()
         def cols = sheet1.getColumns()
-        print( "Row Count =" + rows )
-        print( "Column Count =" + cols ) 
+        script.echo( "Row Count =" + rows )
+        script.echo( "Column Count =" + cols ) 
         for(int i=1;i<rows;i++) { 
             for(int j=0;j<cols;j++) { 
             Cell cell = sheet1.getCell(j,i) 
-            print( cell.getContents() )
+            script.echo( cell.getContents() )
             } 
         }
     }
