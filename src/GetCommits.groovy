@@ -2,9 +2,12 @@ class GetCommits implements Serializable {
     Script script
 
     def commits(body){
-        script.echo("$body.KLI_img")
-        script.echo("$body.GPEF_img")
+        def KLI = body.KLI_img
+        def GPEF = body.GPEF_img
 
-        script.bat "git shortlog ${body.KLI_img} ${body.GPEF_img}"
+        script.echo("$KLI")
+        script.echo("$GPEF")
+
+        script.bat "git shortlog ${KLI} ${GPEF}"
     }
 }
