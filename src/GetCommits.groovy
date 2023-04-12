@@ -8,6 +8,8 @@ class GetCommits{
         script.echo("$KLI")
         script.echo("$GPEF")
 
+        script.echo("$script")
+
     }
 
     def bat_cmd(args){
