@@ -13,8 +13,8 @@ class Deployer{
         Sheet sheet1 = workbook.getSheet("Sheet1")
         def rows = sheet1.getRows()
         def cols = sheet1.getColumns()
-        script.echo( "Row Count =" + rows )
-        script.echo( "Column Count =" + cols ) 
+        // script.echo( "Row Count =" + rows )
+        // script.echo( "Column Count =" + cols ) 
 
         def getcommit = new GetCommits(script:script)
 
@@ -25,8 +25,8 @@ class Deployer{
             Cell cell_GPEF_branch = sheet1.getCell(5,i)
 
             if(cell_KLI_branch.getContents() == cell_GPEF_branch.getContents()){
-                script.echo(cell_KLI_branch.getContents() + " KLI H")
-                script.echo(cell_GPEF_branch.getContents() + " GPERF H")
+                // script.echo(cell_KLI_branch.getContents() + " KLI H")
+                // script.echo(cell_GPEF_branch.getContents() + " GPERF H")
                 getcommit.commits(KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents())
                 // new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
             }
