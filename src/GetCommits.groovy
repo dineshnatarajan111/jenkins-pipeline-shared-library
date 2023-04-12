@@ -1,8 +1,6 @@
 class GetCommits{
     Script script
 
-    def get_commits = new GetCommits(script:script)
-
     def commits(body){
         def KLI = body.KLI_img
         def GPEF = body.GPEF_img
@@ -10,10 +8,10 @@ class GetCommits{
         script.echo("$KLI")
         script.echo("$GPEF")
 
-        get_commits.bat_cmd(script, KLI:KLI, GPEF:GPEF)
+        bat_cmd(KLI:KLI, GPEF:GPEF)
     }
 
-    static def bat_cmd(script, KLI, GPEF){
+    def bat_cmd(KLI, GPEF){
         script.bat "git shortlog ${KLI} ${GPEF}"
     }
 }
