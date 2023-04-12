@@ -2,6 +2,7 @@
 // import org.apache.commons.lang3.StringUtils
 @Grab(group = 'net.sourceforge.jexcelapi', module = 'jxl', version = '2.6.12')
 import jxl.*
+import jxl.write.Label
 
 class Deployer implements Serializable{
     // int tries = 0
