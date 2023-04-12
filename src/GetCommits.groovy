@@ -1,4 +1,4 @@
-class GetCommits implements Serializable {
+class GetCommits{
     Script script
 
     def commits(body){
