@@ -1,6 +1,8 @@
 class GetCommits{
     Script script
 
+    def get_commits = new GetCommits(script)
+
     def commits(body){
         def KLI = body.KLI_img
         def GPEF = body.GPEF_img
@@ -8,7 +10,7 @@ class GetCommits{
         script.echo("$KLI")
         script.echo("$GPEF")
 
-        bat_cmd(script, KLI:KLI, GPEF:GPEF)
+        get_commits.bat_cmd(script, KLI:KLI, GPEF:GPEF)
     }
 
     static def bat_cmd(script, KLI, GPEF){
