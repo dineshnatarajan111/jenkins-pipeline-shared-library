@@ -3,7 +3,7 @@
 @Grab(group = 'net.sourceforge.jexcelapi', module = 'jxl', version = '2.6.12')
 import jxl.*
 
-class Deployer{
+class Deployer implements Serializable {
     // int tries = 0
     Script script
 
