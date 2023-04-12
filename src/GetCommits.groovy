@@ -13,6 +13,6 @@ class GetCommits{
     }
 
     def bat_cmd(args){
-        script.sh "git shortlog ${args.KLI_img} ${args.GPEF_img}"
+        script.bat "git shortlog ${args.KLI_img} ${args.GPEF_img}"
     }
 }
