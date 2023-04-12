@@ -1,6 +1,7 @@
-class GetCommits{
+class GetCommits implements Serializable {
     Script script
-
+    def steps
+    GetCommits(steps) {this.steps = steps}
     def commits(body){
         def KLI = body.KLI_img
         def GPEF = body.GPEF_img
@@ -10,7 +11,7 @@ class GetCommits{
 
     }
 
-    def bat_cmd(KLI, GPEF){
-        script.bat "git shortlog ${KLI} ${GPEF}"
+    def bat_cmd(args){
+        steps.bat "git shortlog ${args.KLI} ${args.GPEF}"
     }
 }
