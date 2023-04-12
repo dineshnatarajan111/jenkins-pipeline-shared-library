@@ -16,7 +16,7 @@ class Deployer{
         script.echo( "Row Count =" + rows )
         script.echo( "Column Count =" + cols ) 
 
-        GetCommits getcommit = new GetCommits(script:this)
+        GetCommits getcommit = new GetCommits(script:script)
 
         for(int i=1;i<rows;i++) { 
             Cell cell_KLI_img = sheet1.getCell(2,i)
