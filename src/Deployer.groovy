@@ -15,6 +15,9 @@ class Deployer{
         def cols = sheet1.getColumns()
         script.echo( "Row Count =" + rows )
         script.echo( "Column Count =" + cols ) 
+
+        GetCommits getcommit = new GetCommits(script:this)
+
         for(int i=1;i<rows;i++) { 
             Cell cell_KLI_img = sheet1.getCell(2,i)
             Cell cell_GPEF_img = sheet1.getCell(4,i) 
@@ -24,7 +27,8 @@ class Deployer{
             if(cell_KLI_branch.getContents() == cell_GPEF_branch.getContents()){
                 script.echo(cell_KLI_branch.getContents() + " KLI H")
                 script.echo(cell_GPEF_branch.getContents() + " GPERF H")
-                new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
+                getcommits(KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents())
+                // new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
             }
             // for(int j=0;j<cols;j++) { 
             // script.echo( cell.getContents() )
