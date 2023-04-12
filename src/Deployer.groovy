@@ -16,7 +16,7 @@ class Deployer{
         // script.echo( "Row Count =" + rows )
         // script.echo( "Column Count =" + cols ) 
 
-        def getcommit = new GetCommits(script:script)
+        // def getcommit = new GetCommits(script:script)
 
         for(int i=1;i<rows;i++) { 
             Cell cell_KLI_img = sheet1.getCell(2,i)
@@ -27,7 +27,9 @@ class Deployer{
             if(cell_KLI_branch.getContents() == cell_GPEF_branch.getContents()){
                 // script.echo(cell_KLI_branch.getContents() + " KLI H")
                 // script.echo(cell_GPEF_branch.getContents() + " GPERF H")
-                getcommit.commits(KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents())
+                // getcommit.commits(KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents())
+
+                script.bat "git shortlog ${KLI_img} ${GPEF_img}"
                 // new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
             }
             // for(int j=0;j<cols;j++) { 
