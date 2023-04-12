@@ -12,6 +12,6 @@ class GetCommits implements Serializable {
     }
 
     def bat_cmd(args){
-        steps.bat "git shortlog ${args.KLI} ${args.GPEF}"
+        steps.bat "git shortlog ${args.KLI_img} ${args.GPEF_img}"
     }
 }
