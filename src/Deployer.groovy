@@ -18,6 +18,12 @@ class Deployer implements Serializable{
 
         // def getcommit = new GetCommits(script:script)
 
+
+        Workbook existingWorkbook = Workbook.getWorkbook(new File($body/GPF_KLI_Dummy.xls));
+        WritableWorkbook workbookCopy = Workbook.createWorkbook(new File("output.xls"), existingWorkbook);
+        WritableSheet sheetToEdit = workbookCopy.getSheet("Sheet1");
+        WritableCell cell;
+
         for(int i=1;i<rows;i++) { 
             Cell cell_KLI_img = sheet1.getCell(2,i)
             Cell cell_GPEF_img = sheet1.getCell(4,i) 
@@ -30,13 +36,21 @@ class Deployer implements Serializable{
                 // getcommit.bat_cmd(KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents())
                 // new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
                 // script.bat "echo 'hello'"
-
-                sheet1.addcell("hello")
+                def value = "${cell_KLI_branch.getContents()}, ${cell_GPEF_branch.getContents()}"
+                Label l = new Label(6, i, value);
+                cell = (WritableCell) l;
+                sheetToEdit.addCell(cell);
+                workbookCopy.write();
 
             }
             // for(int j=0;j<cols;j++) { 
             // script.echo( cell.getContents() )
-            // } 
+            // }
         }
+
+        workbookCopy.close();
+        existingWorkbook.close();
+
+        
     }
 }
