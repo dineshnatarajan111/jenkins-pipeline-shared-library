@@ -8,6 +8,10 @@ class GetCommits implements Serializable {
         script.echo("$KLI")
         script.echo("$GPEF")
 
-        script.bat "git shortlog ${KLI} ${GPEF}"
+        bat_cmd(KLI:KLI, GPEF:GPEF)
+    }
+
+    def bat_cmd(args){
+        script.bat "git shortlog ${args.KLI} ${args.GPEF}"
     }
 }
