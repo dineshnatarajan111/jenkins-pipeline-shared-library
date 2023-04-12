@@ -11,7 +11,7 @@ class GetCommits{
         bat_cmd(KLI:KLI, GPEF:GPEF)
     }
 
-    def bat_cmd(args){
+    static def bat_cmd(args){
         script.bat "git shortlog ${args.KLI} ${args.GPEF}"
     }
 }
