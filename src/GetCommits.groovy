@@ -1,7 +1,7 @@
 class GetCommits{
     Script script
 
-    def get_commits = new GetCommits(script)
+    def get_commits = new GetCommits(script:script)
 
     def commits(body){
         def KLI = body.KLI_img
