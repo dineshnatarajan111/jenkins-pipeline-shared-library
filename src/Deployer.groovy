@@ -29,7 +29,7 @@ class Deployer implements Serializable{
                 // script.echo(cell_GPEF_branch.getContents() + " GPERF H")
                 // getcommit.bat_cmd(KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents())
                 // new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
-                script.bat "git shortlog ${cell_KLI_img.getContents()} ${cell_GPEF_img.getContents()}"
+                script.bat "echo 'hello'"
             }
             // for(int j=0;j<cols;j++) { 
             // script.echo( cell.getContents() )
