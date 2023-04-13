@@ -5,7 +5,7 @@ import jxl.*
 import jxl.write.*
 
 class Deployer implements Serializable{
-    // int tries = 0
+    
     Script script
 
     def run(body){
@@ -14,10 +14,7 @@ class Deployer implements Serializable{
         Sheet sheet1 = workbook.getSheet("Sheet1")
         def rows = sheet1.getRows()
         def cols = sheet1.getColumns()
-        // script.echo( "Row Count =" + rows )
-        // script.echo( "Column Count =" + cols ) 
-
-        // def getcommit = new GetCommits(script:script)
+        
 
 
         Workbook existingWorkbook = Workbook.getWorkbook(new File("$body/GPF_KLI_Dummy.xls"));
@@ -38,20 +35,19 @@ class Deployer implements Serializable{
                 // new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
                 // script.bat "echo 'hello'"
 
+                script.git "git shortlog ${args.KLI_img} ${args.GPEF_img}"
+
                 def value = "${cell_KLI_branch.getContents()}, ${cell_GPEF_branch.getContents()}"
                 Label l = new Label(6, i, value);
                 cell = (WritableCell) l;
                 sheetToEdit.addCell(cell);
 
             }
-            // for(int j=0;j<cols;j++) { 
-            // script.echo( cell.getContents() )
-            // }
+            
         }
         workbookCopy.write();
         workbookCopy.close();
         existingWorkbook.close();
-        // script.archiveArtifacts "GPF_KLI_Dummy.xls"
         
     }
 }
