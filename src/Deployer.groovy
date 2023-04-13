@@ -20,7 +20,7 @@ class Deployer implements Serializable{
         // def getcommit = new GetCommits(script:script)
 
 
-        Workbook existingWorkbook = Workbook.getWorkbook(new File($body/GPF_KLI_Dummy.xls));
+        Workbook existingWorkbook = Workbook.getWorkbook(new File("$body/GPF_KLI_Dummy.xls"));
         WritableWorkbook workbookCopy = Workbook.createWorkbook(new File("output.xls"), existingWorkbook);
         WritableSheet sheetToEdit = workbookCopy.getSheet("Sheet1");
         WritableCell cell;
