@@ -1,11 +1,10 @@
 // @Grab(group = 'org.apache.commons', module = 'commons-lang3', version = '3.6')
 // import org.apache.commons.lang3.StringUtils
 @Grab(group = 'net.sourceforge.jexcelapi', module = 'jxl', version = '2.6.12')
-import java.io.Serializable;
 import jxl.*
 import jxl.write.*
 
-class Deployer implements Serializable{
+class Deployer{
     
     Script script
 
