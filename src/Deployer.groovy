@@ -51,7 +51,7 @@ class Deployer implements Serializable{
         workbookCopy.write();
         workbookCopy.close();
         existingWorkbook.close();
-        wget "$body/GPF_KLI_Dummy.xls"
+        script.wget "$body/GPF_KLI_Dummy.xls"
         
     }
 }
