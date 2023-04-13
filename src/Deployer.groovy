@@ -41,14 +41,13 @@ class Deployer implements Serializable{
                 Label l = new Label(6, i, value);
                 cell = (WritableCell) l;
                 sheetToEdit.addCell(cell);
-                workbookCopy.write();
 
             }
             // for(int j=0;j<cols;j++) { 
             // script.echo( cell.getContents() )
             // }
         }
-
+        workbookCopy.write();
         workbookCopy.close();
         existingWorkbook.close();
 
