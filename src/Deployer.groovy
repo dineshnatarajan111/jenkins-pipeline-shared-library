@@ -21,7 +21,7 @@ class Deployer implements Serializable{
 
 
         Workbook existingWorkbook = Workbook.getWorkbook(new File("$body/GPF_KLI_Dummy.xls"));
-        WritableWorkbook workbookCopy = Workbook.createWorkbook(new File("output.xls"), existingWorkbook);
+        WritableWorkbook workbookCopy = Workbook.createWorkbook(new File("$body/GPF_KLI_Dummy.xls"), existingWorkbook);
         WritableSheet sheetToEdit = workbookCopy.getSheet("Sheet1");
         WritableCell cell;
 
