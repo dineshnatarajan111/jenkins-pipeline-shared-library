@@ -37,7 +37,7 @@ class Deployer implements Serializable{
                 // getcommit.bat_cmd(KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents())
                 // new GetCommits(script:this).commits([KLI_img: cell_KLI_img.getContents() , GPEF_img: cell_GPEF_img.getContents() ])
                 // script.bat "echo 'hello'"
-                script.sh 'git short log ${cell_KLI_img.getContents()} ${cell_GPEF_img.getContents()}'
+                
                 def value = "${cell_KLI_branch.getContents()}, ${cell_GPEF_branch.getContents()}"
                 Label l = new Label(6, i, value);
                 cell = (WritableCell) l;
