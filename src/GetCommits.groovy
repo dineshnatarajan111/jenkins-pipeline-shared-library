@@ -13,6 +13,6 @@ class GetCommits implements Serializable{
     // }
 
     def bat_cmd(args){
-        script.bat "git shortlog 75fdf46 07321b2"
+        script.sh "git shortlog 75fdf46 07321b2"
     }
 }
